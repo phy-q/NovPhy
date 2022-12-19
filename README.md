@@ -3,21 +3,17 @@
 </div>
 
 <p align="center">
-Cheng Xue*, Vimukthini Pinto*, Chathura Gamage*<br> Ekaterina Nikonova, Peng Zhang, Jochen Renz<br>
+Chathura Gamage*, Vimukthini Pinto*, Cheng Xue*<br> Peng Zhang, Ekaterina Nikonova, Matthew Stephenson, Jochen Renz<br>
 School of Computing<br>
 The Australian National University<br>
 Canberra, Australia<br>
-{cheng.xue, vimukthini.inguruwattage, chathura.gamage}@anu.edu.au<br>
-{ekaterina.nikonova, p.zhang, jochen.renz}@anu.edu.au
+{chathura.gamage, vimukthini.inguruwattage, cheng.xue}@anu.edu.au<br>
+
  </p>
 
 Due to the emergence of AI systems that interact with the physical environment, there is an increased interest in incorporating physical reasoning capabilities into those AI systems. But is it enough to only have physical reasoning capabilities to operate in a real physical environment? In the real world, we constantly face novel situations we have not encountered before. As humans, we are competent at successfully adapting to those situations. Similarly, an agent needs to have the ability to function under the impact of novelties in order to properly operate in an open-world physical environment. To facilitate the development of such AI systems, we propose a new testbed that requires an agent to reason about physical scenarios in the presence of novelties and take actions accordingly. To create tasks in the testbed, we develop novelties representing a diverse novelty space and apply them to commonly encountered five physical scenarios in a physical environment related to applying forces and motions such as rolling, falling, and sliding of objects. We evaluate the agents on their novelty detection and adaptation performance using these tasks. According to our novelty design, we measure two capabilities of an agent: the performance on a novelty when it is applied to different physical scenarios and the performance of a physical scenario when different novelties are applied to it. We conduct a thorough evaluation with human players, learning agents, and heuristic agents. Our evaluation shows that humans' performance is far beyond the agents' performance, some agents even with good normal task performance fail drastically when there is a novelty, and some agents that can adapt to novelties adapt slower than humans. We promote the development of intelligent agents capable of performing at the human level or above when operating in open-world physical environments.
 
 \* equal contribution
-
-The research paper can be found here: https://arxiv.org/abs/2108.13696
-
-DOI of the repository: [![DOI](https://zenodo.org/badge/400728416.svg)](https://zenodo.org/badge/latestdoi/400728416)
 
 ---
 #### Table of contents
