@@ -58,7 +58,7 @@ We consider 5 physical scenarios in NovPhy testbed. Firstly, we consider the bas
 We design a representative novelty for each hierarchy level in the open-world novelty hierarchy proposed by the DARPA SAIL-ON program novelty working group. The novelty hierarchy consists of eight novelty levels that cover a wide range of novelty types that could occur in an open-world environment. The table below shows the open-world novelty hierarchy and descriptions of representative novelties in NovPhy. 
 
 | Novelty Level             |  Description |  Representative Novelty |
-:-------------------------:|:-----------|:-----------
+:-------------------------:|:-----------:|:-----------
 1. Objects | New classes, attributes, or representations of non-volitional entities. | A new pig/block that has a different colour to the normal pigs/blocks.
 2. Agents | New classes, attributes, or representations of volitional entities. | A novel external agent, Fan, that blows air (horizontally from left to right) affecting the moving path of objects.
 3. Actions | New classes, attributes, or representations of external agent behavior. | The non-novel external agent, Air Turbulence, increases the magnitude of its upward force.
