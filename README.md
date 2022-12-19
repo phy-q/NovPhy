@@ -18,72 +18,59 @@ Due to the emergence of AI systems that interact with the physical environment, 
 ---
 #### Table of contents
 1. [Physical Scenarios in NovPhy](#scenarios)
-1. [Novelties in NovPhy](#novelties)
-2. [Novel Tasks in NovPhy](#novel-tasks)
-3. [Generating Tasks](#Generating-Tasks)
+2. [Novelties in NovPhy](#novelties)
+3. [Novel Tasks in NovPhy](#novel-tasks)
+4. [Generating Tasks](#Generating-Tasks)
 	1. [Task Generator](#Task-generator) 	
 	2. [Tasks Generted for the Baseline Analysis](#Tasks-generated-for-baselines)
 	3. [Creating Your Own Tasks](#Creating-Your-Own-Tasks)
-4. [Baseline Agents](#BAF)
+5. [Baseline Agents](#BAF)
 	1. [How to Run Heuristic Agents](#RHA)
 	2. [How to Run Learning Agents](#RLA)
 		1. [How to Run DQN and Deep Relational Baselines](#RLA)
 		2. [How to Run Stable Baselines](#OLA)
 	4. [How to Develop Your Own Agent](#ROA)
 	5. [Outline of the Agent Code](#code)
-5. [Framework](#Framework)
+6. [Framework](#Framework)
    1. [The Game Environment](#Env)
    2. [Symbolic Representation Data Structure](#SymbolicRepresentation)
    3. [Communication Protocols](#Protocol)
-6. [Play Data](#PlayData)
+7. [Play Data](#PlayData)
 ---
 
 ---
 
 
 
-## 1. Physical Scenarios in Phy-Q 
+## 1. Physical Scenarios in NovPhy 
 <a name="scenarios"/></a>
-We consider 15 physical scenarios in Phy-Q benchmark. Firstly, we consider the basic physical scenarios associated with applying forces directly on the target objects, i.e., the effect of a single force and the effect of multiple forces. On top of simple forces application, we also include the scenarios associated with more complex motion including rolling, falling, sliding, and bouncing, which are inspired by the physical reasoning capabilities developed in human infancy. Furthermore, we define the objects' relative weight, the relative height, the relative width, the shape differences, and the stability scenarios, which require physical reasoning abilities infants acquire typically in a later stage. On the other hand, we also incorporate clearing path, adequate timing, and manoeuvring capabilities, and taking non-greedy actions, which are required to overcome challenges for robots to work safely and efficiently in physical environments. To sum up, the physical scenarios we consider and the corresponding physical rules that can use to achieve the goal of the associated tasks are:
+We consider 5 physical scenarios in NovPhy testbed. Firstly, we consider the basic physical scenarios associated with applying forces directly on the target objects, i.e., the effect of a single force and the effect of multiple forces. On top of simple forces application, we also include scenarios associated with more complex motion including rolling, falling, and sliding, which are inspired by the physical reasoning capabilities developed in human infancy. The physical scenarios we consider and the corresponding physical rules that can use to achieve the goal of the associated tasks are:
 
-   1. **Single force:** Some target objects can be destroyed with a single force.
-   2. **Multiple forces:** Some target objects need multiple forces to destroy.
-   3. **Rolling:** Circular objects can be rolled along a surface to a target.
-   4. **Falling:** Objects can be fallen on to a target.
-   5. **Sliding:** Non-circular objects can be slid along a surface to a target.
-   6. **Bouncing:** Objects can be bounced off a surface to reach a target.
-   7. **Relative weight:** Objects with correct weight need to be moved to reach a target.
-   8. **Relative height:** Objects with correct height need to be moved to reach a target.
-   9. **Relative width:** Objects with correct width or the opening with correct width should be selected to reach a target.
-   10. **Shape difference:** Objects with correct shape need to be moved/destroyed to reach a target.
-   11. **Non-greedy actions:** Actions need to be selected in the correct order based on physical consequences. The immediate action may be less effective in the short term but advantageous in long term. i.e., reach less targets in the short term to reach more targets later.
-   12. **Structural analysis:** The correct target needs to be chosen to break the stability of a structure.
-   13. **Clearing paths:** A path needs to be created before the target can be reached.
-   14. **Adequate timing:** Correct actions need to be performed within time constraints.
-   15. **Manoeuvring:** Powers of objects need to be activated correctly to reach a target.
+   1. **Single force:** Target objects have to be destroyed with a single force.
+   2. **Multiple forces:** Target objects need multiple forces to destroy.
+   3. **Rolling:** Circular objects have to be rolled along a surface to a target.
+   4. **Falling:** Objects have to fall onto a target.
+   5. **Sliding:** Non-circular objects have to be slid along a surface to a target.
 
-## 2. Phy-Q in Angry Birds
-<a name="Phy-Q"/></a>
-Based on the above physical scenarios, we develop Phy-Q benchmark in Angry Birds. Phy-Q contains tasks from 75 task templates belonging to the fifteen scenarios. The goal of an agent is to destroy all the pigs (green-coloured objects) in the tasks by shooting a given number of birds from the slingshot. Shown below are fifteen example tasks in Phy-Q representing the fifteen scenarios and the solutions for those tasks.
 
-| Task             |  Description |
+## 2. Novelties in NovPhy
+<a name="novelties"/></a>
+We design a representative novelty for each hierarchy level in the open-world novelty hierarchy proposed by the DARPA SAIL-ON program novelty working group. The novelty hierarchy consists of eight novelty levels that cover a wide range of novelty types that could occur in an open-world environment. The table below shows the open-world novelty hierarchy and descriptions of representative novelties in NovPhy. 
+
+| Novelty Level             |  Description |  Representative Novelty |
 :-------------------------:|:-----------
-<img src="tasks/example_tasks/videos/1.1.1.gif" width="400"/> | 1. Single force: A single force is needed to be applied to the pig to destroy it by a direct bird shot.
-<img src="tasks/example_tasks/videos/1.2.2.gif" width="400"/> | 2. Multiple forces: Multiple forces are needed to be applied to destroy the pig by multiple bird shots.
-<img src="tasks/example_tasks/videos/2.1.4.gif" width="400"/> | 3. Rolling: The circular object is needed to be rolled onto the pig, which is unreachable for the bird from the slingshot, causing the pig to be destroyed.
-<img src="tasks/example_tasks/videos/2.2.1.gif" width="400"/> | 4. Falling: The circular object is needed to be fallen onto the pig causing the pig to be destroyed.
-<img src="tasks/example_tasks/videos/2.3.1.gif" width="400"/> | 5. Sliding: The square object is needed to be slid to hit the pig, which is unreachable for the bird from the slingshot, causing the pig to be destroyed.
-<img src="tasks/example_tasks/videos/2.4.2.gif" width="400"/> | 6. Bouncing: The bird is needed to be bounced off the platform (dark-brown object) to hit and destroy the pig.
-<img src="tasks/example_tasks/videos/3.1.3.gif" width="400"/> | 7. Relative weight: The small circular block is lighter than the big circular block. Out of the two blocks, the small circular block can only be rolled to reach the pig and destroy.
-<img src="tasks/example_tasks/videos/3.2.3.gif" width="400"/> | 8. Relative height: The square block on top of the taller rectangular block will not fall through the gap due to the height of the rectangular block. Hence the square block on top of the shorter rectangular block needs to be toppled to fall through the gap and destroy the pig.
-<img src="tasks/example_tasks/videos/3.3.3.gif" width="400"/> | 9. Relative width: The bird cannot go through the lower entrance which has a narrow opening. Hence the bird is needed to be shot to the upper entrance to reach the pig and destroy it.
-<img src="tasks/example_tasks/videos/3.4.3.gif" width="400"/> | 10. Shape difference: The circular block on two triangle blocks can be rolled down by breaking a one triangle block and the circular block on two square blocks cannot be rolled down by breaking a one square block. Hence, the triangle block needs to be destroyed to make the circular block roll and fall onto the pig causing the pig to be destroyed.
-<img src="tasks/example_tasks/videos/3.5.5.gif" width="400"/> | 11. Non-greedy actions: A greedy action tries to destroy the highest number of pigs in a single bird shot. If the two pigs resting on the circular block are destroyed, then the circular block will roll down and block the entrance to reach the below pig. Hence, the below pig is needed to be destroyed first and then the upper two pigs.
-<img src="tasks/example_tasks/videos/3.6.5.gif" width="400"/> | 12. Structural analysis: The bird is needed to be shot at the weak point of the structure to break the stability and destroy the pigs. Shooting elsewhere does not destroy the two pigs with a single bird shot.
-<img src="tasks/example_tasks/videos/3.7.5.gif" width="400"/> | 13. Clearing paths: First, the rectangle block is needed to be positioned correctly to open the path for the circular block to reach the pig. Then the circular block is needed to be rolled to destroy the pig.
-<img src="tasks/example_tasks/videos/3.8.1.gif" width="400"/> | 14. Adequate timing: First, the two circular objects are needed to be rolled to the ramp. Then, after the first circle passes the prop and before the second circle reaches the prop, the prop needs to be destroyed to make the second circle fall onto the lower pig.
-<img src="tasks/example_tasks/videos/3.9.4.gif" width="400"/> | 15. Manoeuvring: The blue bird splits into three other birds when it is tapped in the flight. The blue bird is needed to be tapped at the correct position to manoeuvre the birds to reach the two separated pigs.
-
+Objects | 1. Single force: A single force is needed to be applied to the pig to destroy it by a direct bird shot.
+1. Objects | New classes, attributes, or representations of non-volitional entities. | A new pig/block that has a different colour to the normal pigs/blocks.
+2. Agents | New classes, attributes, or representations of volitional entities. | A novel external agent, Fan, that blows air (horizontally from left to right) affecting the moving path of objects.
+3. Actions | New classes, attributes, or representations of external agent behavior. | The non-novel external agent, Air Turbulence, increases the magnitude of its upward force.
+4. Interactions | New classes, attributes, or representations of dynamic properties of behaviors impacting multiple entities. | Existing circular wood object now has magnetic properties: repels objects of its type and attracts other object types.
+5. Relations | New classes, attributes, or representations of static properties of the relationships between multiple entities. | The slingshot which is at the left side of the tasks is now at at the right side of the tasks (i.e., the spatial relationship between the slingshot and other objects are changed).
+6. Environments | New classes, attributes, or representations of global constraints that impact all entities. | The gravity in the environment is now inverted, which affects the behaviour of the dynamic objects.
+7. Goals | New classes, attributes, or representations of external agent objectives. | The non-novel external agent, Air Turbulence, changes its goal from pushing objects up to pushing objects down.
+8. Events | New classes, attributes, or representations of series of state changes. | When the first bird is dead, a storm occurs that affects the motion of the objects (by applying a force to the right direction).
+	
+## 3. Novel Tasks in NovPhy
+<a name="novel-tasks"/></a>
 Sceenshots of the 75 task templates are shown below. x.y represents the y<sup>th</sup> template of the x<sup>th</sup> scenario. The indexes of the scenarios are: 1. single force, 2. multiple forces, 3. rolling, 4. falling, 5. sliding, 6. bouncing, 7. relative weight, 8. relative height, 9. relative width, 10. shape difference, 11. non-greedy actions, 12. structural analysis, 13. clearing paths, 14. adequate timing, and 15. manoeuvring: 
 
 <table align="center">
