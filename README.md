@@ -59,7 +59,6 @@ We design a representative novelty for each hierarchy level in the open-world no
 
 | Novelty Level             |  Description |  Representative Novelty |
 :-------------------------:|:-----------|:-----------
-Objects | 1. Single force: A single force is needed to be applied to the pig to destroy it by a direct bird shot.
 1. Objects | New classes, attributes, or representations of non-volitional entities. | A new pig/block that has a different colour to the normal pigs/blocks.
 2. Agents | New classes, attributes, or representations of volitional entities. | A novel external agent, Fan, that blows air (horizontally from left to right) affecting the moving path of objects.
 3. Actions | New classes, attributes, or representations of external agent behavior. | The non-novel external agent, Air Turbulence, increases the magnitude of its upward force.
