@@ -17,8 +17,9 @@ Due to the emergence of AI systems that interact with the physical environment, 
 
 ---
 #### Table of contents
-1. [Physical Scenarios in Phy-Q](#Scenarios)
-2. [Phy-Q in Angry Birds](#Phy-Q)
+1. [Physical Scenarios in NovPhy](#scenarios)
+1. [Novelties in NovPhy](#novelties)
+2. [Novel Tasks in NovPhy](#novel-tasks)
 3. [Generating Tasks](#Generating-Tasks)
 	1. [Task Generator](#Task-generator) 	
 	2. [Tasks Generted for the Baseline Analysis](#Tasks-generated-for-baselines)
@@ -42,7 +43,7 @@ Due to the emergence of AI systems that interact with the physical environment, 
 
 
 ## 1. Physical Scenarios in Phy-Q 
-<a name="Scenarios"/></a>
+<a name="scenarios"/></a>
 We consider 15 physical scenarios in Phy-Q benchmark. Firstly, we consider the basic physical scenarios associated with applying forces directly on the target objects, i.e., the effect of a single force and the effect of multiple forces. On top of simple forces application, we also include the scenarios associated with more complex motion including rolling, falling, sliding, and bouncing, which are inspired by the physical reasoning capabilities developed in human infancy. Furthermore, we define the objects' relative weight, the relative height, the relative width, the shape differences, and the stability scenarios, which require physical reasoning abilities infants acquire typically in a later stage. On the other hand, we also incorporate clearing path, adequate timing, and manoeuvring capabilities, and taking non-greedy actions, which are required to overcome challenges for robots to work safely and efficiently in physical environments. To sum up, the physical scenarios we consider and the corresponding physical rules that can use to achieve the goal of the associated tasks are:
 
    1. **Single force:** Some target objects can be destroyed with a single force.
