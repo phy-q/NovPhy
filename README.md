@@ -58,7 +58,7 @@ We consider 5 physical scenarios in NovPhy testbed. Firstly, we consider the bas
 We design a representative novelty for each hierarchy level in the open-world novelty hierarchy proposed by the DARPA SAIL-ON program novelty working group. The novelty hierarchy consists of eight novelty levels that cover a wide range of novelty types that could occur in an open-world environment. The table below shows the open-world novelty hierarchy and descriptions of representative novelties in NovPhy. 
 
 | Novelty Level             |  Description |  Representative Novelty |
-:-------------------------:|:-----------
+:-------------------------:|:-----------|:-----------
 Objects | 1. Single force: A single force is needed to be applied to the pig to destroy it by a direct bird shot.
 1. Objects | New classes, attributes, or representations of non-volitional entities. | A new pig/block that has a different colour to the normal pigs/blocks.
 2. Agents | New classes, attributes, or representations of volitional entities. | A novel external agent, Fan, that blows air (horizontally from left to right) affecting the moving path of objects.
