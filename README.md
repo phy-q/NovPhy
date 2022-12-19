@@ -58,15 +58,15 @@ We consider 5 physical scenarios in NovPhy testbed. Firstly, we consider the bas
 We design a representative novelty for each hierarchy level in the open-world novelty hierarchy proposed by the DARPA SAIL-ON program novelty working group. The novelty hierarchy consists of eight novelty levels that cover a wide range of novelty types that could occur in an open-world environment. The table below shows the open-world novelty hierarchy and descriptions of representative novelties in NovPhy. 
 
 | Novelty Level             |  Description |  Representative Novelty |
-:-------------------------:|:-----------:|:-----------
-1. Objects | New classes, attributes, or representations of non-volitional entities. | A new pig/block that has a different colour to the normal pigs/blocks.
-2. Agents | New classes, attributes, or representations of volitional entities. | A novel external agent, Fan, that blows air (horizontally from left to right) affecting the moving path of objects.
-3. Actions | New classes, attributes, or representations of external agent behavior. | The non-novel external agent, Air Turbulence, increases the magnitude of its upward force.
-4. Interactions | New classes, attributes, or representations of dynamic properties of behaviors impacting multiple entities. | Existing circular wood object now has magnetic properties: repels objects of its type and attracts other object types.
-5. Relations | New classes, attributes, or representations of static properties of the relationships between multiple entities. | The slingshot which is at the left side of the tasks is now at at the right side of the tasks (i.e., the spatial relationship between the slingshot and other objects are changed).
-6. Environments | New classes, attributes, or representations of global constraints that impact all entities. | The gravity in the environment is now inverted, which affects the behaviour of the dynamic objects.
-7. Goals | New classes, attributes, or representations of external agent objectives. | The non-novel external agent, Air Turbulence, changes its goal from pushing objects up to pushing objects down.
-8. Events | New classes, attributes, or representations of series of state changes. | When the first bird is dead, a storm occurs that affects the motion of the objects (by applying a force to the right direction).
+|:------------------------- |------------|-----------------------|
+| 1. Objects | New classes, attributes, or representations of non-volitional entities. | A new pig/block that has a different colour to the normal pigs/blocks.
+| 2. Agents | New classes, attributes, or representations of volitional entities. | A novel external agent, Fan, that blows air (horizontally from left to right) affecting the moving path of objects.
+| 3. Actions | New classes, attributes, or representations of external agent behavior. | The non-novel external agent, Air Turbulence, increases the magnitude of its upward force.
+| 4. Interactions | New classes, attributes, or representations of dynamic properties of behaviors impacting multiple entities. | Existing circular wood object now has magnetic properties: repels objects of its type and attracts other object types.
+| 5. Relations | New classes, attributes, or representations of static properties of the relationships between multiple entities. | The slingshot which is at the left side of the tasks is now at at the right side of the tasks (i.e., the spatial relationship between the slingshot and other objects are changed).
+| 6. Environments | New classes, attributes, or representations of global constraints that impact all entities. | The gravity in the environment is now inverted, which affects the behaviour of the dynamic objects.
+| 7. Goals | New classes, attributes, or representations of external agent objectives. | The non-novel external agent, Air Turbulence, changes its goal from pushing objects up to pushing objects down.
+| 8. Events | New classes, attributes, or representations of series of state changes. | When the first bird is dead, a storm occurs that affects the motion of the objects (by applying a force to the right direction).
 	
 ## 3. Novel Tasks in NovPhy
 <a name="novel-tasks"/></a>
