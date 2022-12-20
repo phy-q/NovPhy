@@ -77,38 +77,130 @@ We created novel task templates in NovPhy by applying the above mentioned eight 
         <tr>
         	<td><img src="tasks/example_tasks/images/010101_0.png" width="500"/></td>
 		<td><img src="tasks/example_tasks/images/010101_1.png" width="500"/></td>
-        	<td><img src="tasks/example_tasks/images/010102_0.png" width="500"/></td>
-		<td><img src="tasks/example_tasks/images/010102_1.png" width="500"/></td>
+        	<td><img src="tasks/example_tasks/images/010201_0.png" width="500"/></td>
+		<td><img src="tasks/example_tasks/images/010201_2.png" width="500"/></td>
         </tr>
         <tr>
         	<td colspan=2  align="center">Objects</td>
 		<td colspan=2  align="center">Agents</td>
         </tr>
         <tr>
-        	<td><img src="tasks/example_tasks/images/010101_0.png" width="500"/></td>
-		<td><img src="tasks/example_tasks/images/010101_1.png" width="500"/></td>
-        	<td><img src="tasks/example_tasks/images/010102_0.png" width="500"/></td>
-		<td><img src="tasks/example_tasks/images/010102_1.png" width="500"/></td>
+        	<td><img src="tasks/example_tasks/images/010301_0.png" width="500"/></td>
+		<td><img src="tasks/example_tasks/images/010301_3.png" width="500"/></td>
+        	<td><img src="tasks/example_tasks/images/010401_0.png" width="500"/></td>
+		<td><img src="tasks/example_tasks/images/010401_4.png" width="500"/></td>
         </tr>
         <tr>
         	<td colspan=2  align="center">Actions</td>
 		<td colspan=2  align="center">Interactions</td>
         </tr>
 	        <tr>
-        	<td><img src="tasks/example_tasks/images/010101_0.png" width="500"/></td>
-		<td><img src="tasks/example_tasks/images/010101_1.png" width="500"/></td>
-        	<td><img src="tasks/example_tasks/images/010102_0.png" width="500"/></td>
-		<td><img src="tasks/example_tasks/images/010102_1.png" width="500"/></td>
+        	<td><img src="tasks/example_tasks/images/010501_0.png" width="500"/></td>
+		<td><img src="tasks/example_tasks/images/010501_5.png" width="500"/></td>
+        	<td><img src="tasks/example_tasks/images/010601_0.png" width="500"/></td>
+		<td><img src="tasks/example_tasks/images/010601_6.png" width="500"/></td>
         </tr>
         <tr>
 		<td colspan=2  align="center">Relations</td>
 		<td colspan=2  align="center">Environments</td>
         </tr>
         <tr>
-        	<td><img src="tasks/example_tasks/images/010101_0.png" width="500"/></td>
-		<td><img src="tasks/example_tasks/images/010101_1.png" width="500"/></td>
+        	<td><img src="tasks/example_tasks/images/010701_0.png" width="500"/></td>
+		<td><img src="tasks/example_tasks/images/010701_7.png" width="500"/></td>
+        	<td><img src="tasks/example_tasks/images/010801_0.png" width="500"/></td>
+		<td><img src="tasks/example_tasks/images/010801_8.png" width="500"/></td>
+        </tr>
+        <tr>
+        	<td colspan=2  align="center">Goals</td>
+		<td colspan=2  align="center">Events</td>
+        </tr>
+	<tr>
+        	<td colspan=4  align="center">Task templates of the single force scenario. In each pair, the left figure is the normal task template and the right figure is the corresponding task template with the novelty applied.</td>
+        </tr>
+</table>
+ 
+<table align="center">
+        <tr>
         	<td><img src="tasks/example_tasks/images/010102_0.png" width="500"/></td>
 		<td><img src="tasks/example_tasks/images/010102_1.png" width="500"/></td>
+        	<td><img src="tasks/example_tasks/images/010202_0.png" width="500"/></td>
+		<td><img src="tasks/example_tasks/images/010202_2.png" width="500"/></td>
+        </tr>
+        <tr>
+        	<td colspan=2  align="center">Objects</td>
+		<td colspan=2  align="center">Agents</td>
+        </tr>
+        <tr>
+        	<td><img src="tasks/example_tasks/images/010302_0.png" width="500"/></td>
+		<td><img src="tasks/example_tasks/images/010302_3.png" width="500"/></td>
+        	<td><img src="tasks/example_tasks/images/010402_0.png" width="500"/></td>
+		<td><img src="tasks/example_tasks/images/010402_4.png" width="500"/></td>
+        </tr>
+        <tr>
+        	<td colspan=2  align="center">Actions</td>
+		<td colspan=2  align="center">Interactions</td>
+        </tr>
+	        <tr>
+        	<td><img src="tasks/example_tasks/images/010502_0.png" width="500"/></td>
+		<td><img src="tasks/example_tasks/images/010502_5.png" width="500"/></td>
+        	<td><img src="tasks/example_tasks/images/010602_0.png" width="500"/></td>
+		<td><img src="tasks/example_tasks/images/010602_6.png" width="500"/></td>
+        </tr>
+        <tr>
+		<td colspan=2  align="center">Relations</td>
+		<td colspan=2  align="center">Environments</td>
+        </tr>
+        <tr>
+        	<td><img src="tasks/example_tasks/images/010702_0.png" width="500"/></td>
+		<td><img src="tasks/example_tasks/images/010702_7.png" width="500"/></td>
+        	<td><img src="tasks/example_tasks/images/010802_0.png" width="500"/></td>
+		<td><img src="tasks/example_tasks/images/010802_8.png" width="500"/></td>
+        </tr>
+        <tr>
+        	<td colspan=2  align="center">Goals</td>
+		<td colspan=2  align="center">Events</td>
+        </tr>
+	<tr>
+        	<td colspan=4  align="center">Task templates of the multiple forces scenario. In each pair, the left figure is the normal task template and the right figure is the corresponding task template with the novelty applied.</td>
+        </tr>
+</table>
+
+<table align="center">
+        <tr>
+        	<td><img src="tasks/example_tasks/images/010103_0.png" width="500"/></td>
+		<td><img src="tasks/example_tasks/images/010103_1.png" width="500"/></td>
+        	<td><img src="tasks/example_tasks/images/010203_0.png" width="500"/></td>
+		<td><img src="tasks/example_tasks/images/010203_2.png" width="500"/></td>
+        </tr>
+        <tr>
+        	<td colspan=2  align="center">Objects</td>
+		<td colspan=2  align="center">Agents</td>
+        </tr>
+        <tr>
+        	<td><img src="tasks/example_tasks/images/010303_0.png" width="500"/></td>
+		<td><img src="tasks/example_tasks/images/010303_3.png" width="500"/></td>
+        	<td><img src="tasks/example_tasks/images/010403_0.png" width="500"/></td>
+		<td><img src="tasks/example_tasks/images/010403_4.png" width="500"/></td>
+        </tr>
+        <tr>
+        	<td colspan=2  align="center">Actions</td>
+		<td colspan=2  align="center">Interactions</td>
+        </tr>
+	        <tr>
+        	<td><img src="tasks/example_tasks/images/010503_0.png" width="500"/></td>
+		<td><img src="tasks/example_tasks/images/010503_5.png" width="500"/></td>
+        	<td><img src="tasks/example_tasks/images/010603_0.png" width="500"/></td>
+		<td><img src="tasks/example_tasks/images/010603_6.png" width="500"/></td>
+        </tr>
+        <tr>
+		<td colspan=2  align="center">Relations</td>
+		<td colspan=2  align="center">Environments</td>
+        </tr>
+        <tr>
+        	<td><img src="tasks/example_tasks/images/010703_0.png" width="500"/></td>
+		<td><img src="tasks/example_tasks/images/010703_7.png" width="500"/></td>
+        	<td><img src="tasks/example_tasks/images/010803_0.png" width="500"/></td>
+		<td><img src="tasks/example_tasks/images/010803_8.png" width="500"/></td>
         </tr>
         <tr>
         	<td colspan=2  align="center">Goals</td>
@@ -118,8 +210,99 @@ We created novel task templates in NovPhy by applying the above mentioned eight 
         	<td colspan=4  align="center">Task templates of the rolling scenario. In each pair, the left figure is the normal task template and the right figure is the corresponding task template with the novelty applied.</td>
         </tr>
 </table>
- 
 
+
+<table align="center">
+        <tr>
+        	<td><img src="tasks/example_tasks/images/010104_0.png" width="500"/></td>
+		<td><img src="tasks/example_tasks/images/010104_1.png" width="500"/></td>
+        	<td><img src="tasks/example_tasks/images/010204_0.png" width="500"/></td>
+		<td><img src="tasks/example_tasks/images/010204_2.png" width="500"/></td>
+        </tr>
+        <tr>
+        	<td colspan=2  align="center">Objects</td>
+		<td colspan=2  align="center">Agents</td>
+        </tr>
+        <tr>
+        	<td><img src="tasks/example_tasks/images/010304_0.png" width="500"/></td>
+		<td><img src="tasks/example_tasks/images/010304_3.png" width="500"/></td>
+        	<td><img src="tasks/example_tasks/images/010404_0.png" width="500"/></td>
+		<td><img src="tasks/example_tasks/images/010404_4.png" width="500"/></td>
+        </tr>
+        <tr>
+        	<td colspan=2  align="center">Actions</td>
+		<td colspan=2  align="center">Interactions</td>
+        </tr>
+	        <tr>
+        	<td><img src="tasks/example_tasks/images/010504_0.png" width="500"/></td>
+		<td><img src="tasks/example_tasks/images/010504_5.png" width="500"/></td>
+        	<td><img src="tasks/example_tasks/images/010604_0.png" width="500"/></td>
+		<td><img src="tasks/example_tasks/images/010604_6.png" width="500"/></td>
+        </tr>
+        <tr>
+		<td colspan=2  align="center">Relations</td>
+		<td colspan=2  align="center">Environments</td>
+        </tr>
+        <tr>
+        	<td><img src="tasks/example_tasks/images/010704_0.png" width="500"/></td>
+		<td><img src="tasks/example_tasks/images/010704_7.png" width="500"/></td>
+        	<td><img src="tasks/example_tasks/images/010804_0.png" width="500"/></td>
+		<td><img src="tasks/example_tasks/images/010804_8.png" width="500"/></td>
+        </tr>
+        <tr>
+        	<td colspan=2  align="center">Goals</td>
+		<td colspan=2  align="center">Events</td>
+        </tr>
+	<tr>
+        	<td colspan=4  align="center">Task templates of the falling scenario. In each pair, the left figure is the normal task template and the right figure is the corresponding task template with the novelty applied.</td>
+        </tr>
+</table>
+
+<table align="center">
+        <tr>
+        	<td><img src="tasks/example_tasks/images/010105_0.png" width="500"/></td>
+		<td><img src="tasks/example_tasks/images/010105_1.png" width="500"/></td>
+        	<td><img src="tasks/example_tasks/images/010205_0.png" width="500"/></td>
+		<td><img src="tasks/example_tasks/images/010205_2.png" width="500"/></td>
+        </tr>
+        <tr>
+        	<td colspan=2  align="center">Objects</td>
+		<td colspan=2  align="center">Agents</td>
+        </tr>
+        <tr>
+        	<td><img src="tasks/example_tasks/images/010305_0.png" width="500"/></td>
+		<td><img src="tasks/example_tasks/images/010305_3.png" width="500"/></td>
+        	<td><img src="tasks/example_tasks/images/010405_0.png" width="500"/></td>
+		<td><img src="tasks/example_tasks/images/010405_4.png" width="500"/></td>
+        </tr>
+        <tr>
+        	<td colspan=2  align="center">Actions</td>
+		<td colspan=2  align="center">Interactions</td>
+        </tr>
+	        <tr>
+        	<td><img src="tasks/example_tasks/images/010505_0.png" width="500"/></td>
+		<td><img src="tasks/example_tasks/images/010505_5.png" width="500"/></td>
+        	<td><img src="tasks/example_tasks/images/010605_0.png" width="500"/></td>
+		<td><img src="tasks/example_tasks/images/010605_6.png" width="500"/></td>
+        </tr>
+        <tr>
+		<td colspan=2  align="center">Relations</td>
+		<td colspan=2  align="center">Environments</td>
+        </tr>
+        <tr>
+        	<td><img src="tasks/example_tasks/images/010705_0.png" width="500"/></td>
+		<td><img src="tasks/example_tasks/images/010705_7.png" width="500"/></td>
+        	<td><img src="tasks/example_tasks/images/010805_0.png" width="500"/></td>
+		<td><img src="tasks/example_tasks/images/010805_8.png" width="500"/></td>
+        </tr>
+        <tr>
+        	<td colspan=2  align="center">Goals</td>
+		<td colspan=2  align="center">Events</td>
+        </tr>
+	<tr>
+        	<td colspan=4  align="center">Task templates of the sliding scenario. In each pair, the left figure is the normal task template and the right figure is the corresponding task template with the novelty applied.</td>
+        </tr>
+</table>
 
 
 ## 3. Generating Tasks<a name="Generating-Tasks"/></a>
