@@ -330,7 +330,7 @@ We generated 350 tasks from each of the 40 normal task templates and 40 novel ta
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-- Levels/ <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-- task files of the novelty-scenario<br>
 
-The novelty indexes (i) 1 to  8 are the novelties objects, agents, actions, interactions, relations, environments, goals, and events respectively. The scenario indexes (j) xxxx01 to xxxx05 are the scenarios single force, multiple forces, rolling, falling, and sliding respectively. All the tasks of the normal task templates are in the novelty_level_0 folder under corresponding type_j subfolders.  The task templates folder (```tasks/task_templates```) also follows the same naming structure. 
+The novelty indexes i, 1 to  8 are the novelties objects, agents, actions, interactions, relations, environments, goals, and events respectively. The scenario indexes j, xxxx01 to xxxx05 are the scenarios single force, multiple forces, rolling, falling, and sliding respectively. All the tasks of the normal task templates are in the novelty_level_0 folder under corresponding type_j subfolders.  The task templates folder (```tasks/task_templates```) also follows the same naming structure. 
 
 ### 4.3 Creating Your Own Tasks<a name="Creating-Your-Own-Tasks"/></a>
 
