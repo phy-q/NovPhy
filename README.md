@@ -325,12 +325,12 @@ We develop a Task Generator that can generate tasks for the task templates we de
 We generated 350 tasks from each of the 40 normal task templates and 40 novel task templates for the baseline analysis. The generated tasks can be found in ```tasks/generated_tasks.zip```. After extracting this file, the generatd tasks can be found located in the folder structure: 
 <br>
 &nbsp;&nbsp;&nbsp;&nbsp;generated_tasks/<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-- index of the novelty (named novelty_level_i)/ <br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-- index of the scenario (named type_i)/ <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-- index of the novelty (novelty_level_i)/ <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-- index of the scenario (type_j)/ <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-- Levels/ <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-- task files of the novelty-scenario<br>
 
-The novelty indexes 1 to  8 are the novelties objects, agents, actions, interactions, relations, environments, goals, and events respectively. The scenario indexes xxxx01 to xxxx05 are the scenarios single force, multiple forces, rolling, falling, and sliding respectively. The task templates folder (```tasks/task_templates```) also follows the same naming structure. 
+The novelty indexes (i) 1 to  8 are the novelties objects, agents, actions, interactions, relations, environments, goals, and events respectively. The scenario indexes (j) xxxx01 to xxxx05 are the scenarios single force, multiple forces, rolling, falling, and sliding respectively. All the tasks of the normal task templates are in the novelty_level_0 folder under corresponding type_j subfolders.  The task templates folder (```tasks/task_templates```) also follows the same naming structure. 
 
 ### 4.3 Creating Your Own Tasks<a name="Creating-Your-Own-Tasks"/></a>
 
