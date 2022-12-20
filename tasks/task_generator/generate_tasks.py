@@ -8,7 +8,7 @@ from utils.data_classes import *
 # input and output folders
 level_input_folder = './input/'
 level_output_folder = './output/'
-config_file = 'Novelty Benchmark Naming Convention.xlsx'
+config_file = 'template_constraints.xlsx'
 
 
 class GenerateVariations:
