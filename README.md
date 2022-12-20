@@ -3,12 +3,13 @@
 </div>
 
 <p align="center">
-Chathura Gamage*, Vimukthini Pinto*, Cheng Xue*<br> Peng Zhang, Ekaterina Nikonova, Matthew Stephenson, Jochen Renz<br>
-School of Computing<br>
+Chathura Gamage<sup>*,1</sup>, Vimukthini Pinto<sup>*,1</sup>, Cheng Xue<sup>*,1</sup><br> Peng Zhang<sup>1</sup>, Ekaterina Nikonova<sup>1</sup>, Matthew Stephenson<sup>2</sup>, Jochen Renz<sup>1</sup><br>
+<sup>1</sup>School of Computing<br>
 The Australian National University<br>
 Canberra, Australia<br>
+<sup>2</sup>Maastricht University<br>
+Maastricht, The Netherlands<br>
 {chathura.gamage, vimukthini.inguruwattage, cheng.xue}@anu.edu.au<br>
-
  </p>
 
 Due to the emergence of AI systems that interact with the physical environment, there is an increased interest in incorporating physical reasoning capabilities into those AI systems. But is it enough to only have physical reasoning capabilities to operate in a real physical environment? In the real world, we constantly face novel situations we have not encountered before. As humans, we are competent at successfully adapting to those situations. Similarly, an agent needs to have the ability to function under the impact of novelties in order to properly operate in an open-world physical environment. To facilitate the development of such AI systems, we propose a new testbed that requires an agent to reason about physical scenarios in the presence of novelties and take actions accordingly. To create tasks in the testbed, we develop novelties representing a diverse novelty space and apply them to commonly encountered five physical scenarios in a physical environment related to applying forces and motions such as rolling, falling, and sliding of objects. We evaluate the agents on their novelty detection and adaptation performance using these tasks. According to our novelty design, we measure two capabilities of an agent: the performance on a novelty when it is applied to different physical scenarios and the performance of a physical scenario when different novelties are applied to it. We conduct a thorough evaluation with human players, learning agents, and heuristic agents. Our evaluation shows that humans' performance is far beyond the agents' performance, some agents even with good normal task performance fail drastically when there is a novelty, and some agents that can adapt to novelties adapt slower than humans. We promote the development of intelligent agents capable of performing at the human level or above when operating in open-world physical environments.
@@ -305,35 +306,37 @@ We created novel task templates in NovPhy by applying the above mentioned eight 
 </table>
 
 
-## 3. Generating Tasks<a name="Generating-Tasks"/></a>
+## 4. Generating Tasks<a name="Generating-Tasks"/></a>
 
-### 3.1 Task Generator<a name="Task-generator"/></a>
+### 4.1 Task Generator<a name="Task-generator"/></a>
 
-We develop a Task Generator that can generate tasks for the task templates we designed for each scenario.<br>
+We develop a Task Generator that can generate tasks for the task templates we designed for each novelty-scenario.<br>
 1. To run the Task Generator:<br>
     1. Go to ```tasks/task_generator```
-    2. Copy the task templates that you want to generate tasks into the ```input``` (level templates can be found in ```tasks/task_templates```)
+    2. Copy the task templates that you want to generate tasks into the ```input``` (task templates can be found in ```tasks/task_templates```)
     3. Run the Task Generator providing the number of tasks as an argument
      ```
         python generate_tasks.py <number of tasks to generate>
      ```
     4. Generated tasks will be available in the ```output```
 
-### 3.2 Tasks Generated for Baseline Analysis<a name="Tasks-generated-for-baselines"/></a>
+### 4.2 Tasks Generated for Baseline Analysis<a name="Tasks-generated-for-baselines"/></a>
 
-We generated 100 tasks from each of the 75 task templates for the baseline analysis. We have categorized the 15 scenarios into 3 categories for convenience. The scenarios belong to each category are: category 1 (1.1 single force and 1.2 multiple forces), category 2 (2.1 rolling, 2.2 falling, 2.3 sliding, and 2.4 bouncing), and category 3 (3.1 relative weight, 3.2 relative height, 3.3 relative width, 3.4 shape difference, 3.5 non-greedy actions, 3.6 structural analysis, 3.7 clearing paths, 3.8 adequate timing, and 3.9 manoeuvring). Here  x.y represents the y<sup>th</sup> scenario of the x<sup>th</sup> category. The generated tasks can be found in ```tasks/generated_tasks.zip```. After extracting this file, the generatd tasks can be found located in the folder structure: 
+We generated 350 tasks from each of the 40 normal task templates and 40 novel task templates for the baseline analysis. The generated tasks can be found in ```tasks/generated_tasks.zip```. After extracting this file, the generatd tasks can be found located in the folder structure: 
 <br>
 &nbsp;&nbsp;&nbsp;&nbsp;generated_tasks/<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-- index of the category/ <br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-- index of the scenario/ <br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-- index of the template/ <br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-- task files named as categoryIndex_scenarioIndex_templateIndex_taskIndex.xml<br>	
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-- index of the novelty (named novelty_level_i)/ <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-- index of the scenario (named type_i)/ <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-- Levels/ <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-- task files of the novelty-scenario<br>
 
-### 3.3 Creating Your Own Tasks<a name="Creating-Your-Own-Tasks"/></a>
+The novelty indexes 1 to  8 are the novelties objects, agents, actions, interactions, relations, environments, goals, and events respectively. The scenario indexes xxxx01 to xxxx05 are the scenarios single force, multiple forces, rolling, falling, and sliding respectively. The task templates folder (```tasks/task_templates```) also follows the same naming structure. 
+
+### 4.3 Creating Your Own Tasks<a name="Creating-Your-Own-Tasks"/></a>
 
 If you want to design your own task templates, you can use the interactive Task Template Designer tool we have provided, which is developed in Unity.
 1. To design your own task template:<br>
-    1. Open the ```tasks/task_template_designer``` in Unity
+    1. Open the project ```tasks/task_template_designer``` in Unity
     2. Run the application in Unity Editor and load any game level
     3. While in the game level, open the Level Editor menu by navigating to the ```Level Editor -> Edit Level``` in the top-menu of the Unity editor
     4. From the Level Editor menu you can load a game level, save the level, and add any game objects to the level
@@ -342,11 +345,11 @@ If you want to design your own task templates, you can use the interactive Task 
 
 
 2. To generate tasks using your own task template
-    1. Add necessary constraints according to your template into the ```tasks/task_generator/utils/generate_variations.py``` script of the Task Generator
+    1. Add necessary constraints according to your template into the ```tasks/task_generator/template_constraints.xlsx``` file
     2. Run the Task Generator using the instructions given in [Section 3.1](#Task-generator)
     
 
-## 4. Baseline Agents and the Framework<a name="BAF"></a>
+## 5. Baseline Agents and the Framework<a name="BAF"></a>
 
 Tested environments:
 - Ubuntu: 18.04/20.04
@@ -364,7 +367,7 @@ Before running agents, please:
 1. Go to ```sciencebirdsgames``` and unzip ```Linux.zip```
 2. Go to ```sciencebirdslevels/generated_tasks``` and unzip ```fifth_generation.zip```
 
-### 4.1 How to Run Heuristic Agents<a name="RHA"></a>
+### 5.1 How to Run Heuristic Agents<a name="RHA"></a>
 
 1. Run Java heuristic agents: Datalab and Eagle Wings: <br>
 
@@ -397,7 +400,7 @@ Before running agents, please:
        ./TestPythonHeuristicAgent.sh PigShooter
        ```
 
-### 4.2.1 How to Run DQN and Deep Relational Baselines<a name="RLA"></a>
+### 5.2.1 How to Run DQN and Deep Relational Baselines<a name="RLA"></a>
 
 #### For Symbolic Agent
 1. Go to ```sciencebirdsagents/Utils```
@@ -429,7 +432,7 @@ Before running agents, please:
     ```
     
 
-### 4.2.2 How to Run Stable Baselines 3 Agents<a name="OLA"></a>
+### 5.2.2 How to Run Stable Baselines 3 Agents<a name="OLA"></a>
 
 #### For Symbolic Agent
 1. Go to ```sciencebirdsagents/Utils```
@@ -454,7 +457,7 @@ Before running agents, please:
     
 
 
-### 4.3 How to Develop Your Own Agent <a name="ROA"></a>
+### 5.3 How to Develop Your Own Agent <a name="ROA"></a>
 
 We provide a gym-like environment. For a simple demo, which can be found at ```demo.py```
 
@@ -482,7 +485,7 @@ for level_idx in level_list:
     s, r, is_done, info = env.reload_current_level() #go to the next level
 ```
     
-### 4.4 Outline of the Agent Code <a name="Code"></a>
+### 5.4 Outline of the Agent Code <a name="Code"></a>
 
 The ```./sciencebirdsagents``` folder contains all the relevant source code of our agents. Below is the outline of the code (this is a
 simple description. Detailed documentation in progress):
@@ -535,16 +538,16 @@ simple description. Detailed documentation in progress):
 17. ```TrainAndTestOpenAIStableBaselines.sh```: Bash script to run OpenAI Stable Baseline 3 agents to test both local and board generalization.
 18. 
 
-## 5. Framework<a name="Framework"></a>
+## 6. Framework<a name="Framework"></a>
 
-### 5.1 The Game Environment<a name="Env"></a>
+### 6.1 The Game Environment<a name="Env"></a>
 
 1. The coordination system
     - in the science birds game, the origin point (0,0) is the bottom-left corner, and the Y coordinate increases along
       the upwards direction, otherwise the same as above.
     - Coordinates ranging from (0,0) to (640,480).
 
-### 5.2 Symbolic Representation Data Structure<a name="SymbolicRepresentation"></a>
+### 6.2 Symbolic Representation Data Structure<a name="SymbolicRepresentation"></a>
 
 1. Symbolic Representation data of game objects is stored in a Json object. The json object describes an array where each element
    describes a game object. Game object categories, and their properties are described below:
@@ -598,7 +601,7 @@ simple description. Detailed documentation in progress):
     - The noise is uniformly distributed
     - We will later offer more sophisticated and adjustable noise.
 
-### 5.3 Communication Protocols<a name="Protocol"></a>
+### 6.3 Communication Protocols<a name="Protocol"></a>
 
 <table style="text-align:center;">
     <thead>
@@ -849,11 +852,11 @@ simple description. Detailed documentation in progress):
 
 </table>
 
-## 6. Play Data 
+## 7. Play Data 
 <a name="PlayData"/></a>
 Play data folder contains two zip files. human_player_data.zip and baseline_agent_data.zip. 
 
-### 6.1 Human Player Data
+### 7.1 Human Player Data
 The human player data on Phy-Q is given in ```human_player_data.zip```. This includes summarized data for 20 players. Each .csv file is for a player and the following are the columns.
 1.	levelIndex: The index assigned to the task 
 2.	attempts: Number of attempts taken to solve the task (The value is given as 100 if the task is not solved)
