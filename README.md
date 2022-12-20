@@ -23,8 +23,8 @@ Due to the emergence of AI systems that interact with the physical environment, 
 3. [Novel Tasks in NovPhy](#novel-tasks)
 4. [Generating Tasks](#generating-tasks)
 	1. [Task Generator](#task-generator) 	
-	2. [Tasks Generted for the Baseline Analysis](#Tasks-generated-for-baselines)
-	3. [Creating Your Own Tasks](#Creating-Your-Own-Tasks)
+	2. [Tasks Generted for the Baseline Analysis](#tasks-generated-for-baselines)
+	3. [Creating Your Own Tasks](#creating-your-own-tasks)
 5. [Baseline Agents](#BAF)
 	1. [How to Run Heuristic Agents](#RHA)
 	2. [How to Run Learning Agents](#RLA)
@@ -320,7 +320,7 @@ We develop a Task Generator that can generate tasks for the task templates we de
      ```
     4. Generated tasks will be available in the ```output```
 
-### 4.2 Tasks Generated for Baseline Analysis<a name="Tasks-generated-for-baselines"/></a>
+### 4.2 Tasks Generated for Baseline Analysis<a name="tasks-generated-for-baselines"/></a>
 
 We generated 350 tasks from each of the 40 normal task templates and 40 novel task templates for the baseline analysis. The generated tasks can be found in ```tasks/generated_tasks.zip```. After extracting this file, the generatd tasks can be found located in the folder structure: 
 <br>
@@ -332,7 +332,7 @@ We generated 350 tasks from each of the 40 normal task templates and 40 novel ta
 
 The novelty indexes i, 1 to  8 are the novelties objects, agents, actions, interactions, relations, environments, goals, and events respectively. The scenario indexes j, xxxx01 to xxxx05 are the scenarios single force, multiple forces, rolling, falling, and sliding respectively. All the tasks of the normal task templates are in the novelty_level_0 folder under corresponding type_j subfolders.  The task templates folder (```tasks/task_templates```) also follows the same naming structure. 
 
-### 4.3 Creating Your Own Tasks<a name="Creating-Your-Own-Tasks"/></a>
+### 4.3 Creating Your Own Tasks<a name="creating-your-own-tasks"/></a>
 
 If you want to design your own task templates, you can use the interactive Task Template Designer tool we have provided, which is developed in Unity.
 1. To design your own task template:<br>
