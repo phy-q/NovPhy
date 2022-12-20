@@ -21,8 +21,8 @@ Due to the emergence of AI systems that interact with the physical environment, 
 1. [Physical Scenarios in NovPhy](#scenarios)
 2. [Novelties in NovPhy](#novelties)
 3. [Novel Tasks in NovPhy](#novel-tasks)
-4. [Generating Tasks](#Generating-Tasks)
-	1. [Task Generator](#Task-Generator) 	
+4. [Generating Tasks](#generating-tasks)
+	1. [Task Generator](#task-generator) 	
 	2. [Tasks Generted for the Baseline Analysis](#Tasks-generated-for-baselines)
 	3. [Creating Your Own Tasks](#Creating-Your-Own-Tasks)
 5. [Baseline Agents](#BAF)
@@ -306,9 +306,9 @@ We created novel task templates in NovPhy by applying the above mentioned eight 
 </table>
 
 
-## 4. Generating Tasks<a name="Generating-Tasks"/></a>
+## 4. Generating Tasks<a name="generating-tasks"/></a>
 
-### 4.1 Task Generator<a name="Task-Generator"/></a>
+### 4.1 Task Generator<a name="task-generator"/></a>
 
 We develop a Task Generator that can generate tasks for the task templates we designed for each novelty-scenario.<br>
 1. To run the Task Generator:<br>
