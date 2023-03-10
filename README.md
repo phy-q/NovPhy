@@ -854,7 +854,7 @@ simple description. Detailed documentation in progress):
 
 ## 7. Evaluation Data 
 <a name="EvaluationData"/></a>
-Evaluation data folder contains three zip files. adaptation_data.zip, detection_data.zip, and human_playdata.zip. 
+Evaluation data folder contains three zip files. ```adaptation_data.zip```, ```detection_data.zip```, and ```human_playdata.zip```. 
 
 ### 7.1 Adpatation Data
 The ```adaptation_data.zip``` contains datasets for 11 agents. Each .csv file is for a single agent and the following are the columns. 
