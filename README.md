@@ -852,16 +852,36 @@ simple description. Detailed documentation in progress):
 
 </table>
 
-## 7. Play Data 
-<a name="PlayData"/></a>
-Play data folder contains two zip files. human_player_data.zip and baseline_agent_data.zip. 
+## 7. Evaluation Data 
+<a name="EvaluationData"/></a>
+Evaluation data folder contains three zip files. adaptation_data.zip, detection_data.zip, and human_playdata.zip. 
+
+### 7.1 Adpatation Data
+The ```adaptation_data.zip``` contains datasets for 11 agents. Each .csv file is for a single agent and the following are the columns. 
+1.	LevelIndex: The index assigned to the task 
+2.	Score: The score achieved in the task
+3.	LevelStatus: The Pass/Fail status of the task
+4.	birdsRemaining: Number of birds remaining at the end of the task
+5.	pigsRemaining: Number of pigs remaining at the end of the task
+6.	birdsAtStart: Number of birds at the start of the task
+7.	pigsAtStart: Number of pigs at the start of the task
+8.	trial: The trial the task belongs
+9.	levelName: The name of the task
+10.	informed: The informed/uninformed status of the task
+11.	novelty: If the task is basic/novelty 
+12.	index: An index assigned to the task (Negatives for basic and postives for novel)
+
+### 7.2 Detection Data
+The ```detection_data.zip``` contains datasets two zip files ```pre_assumed_moving_average.zip``` and ```simple_moving_average.zip```. The first is the detection calculted using pre-assumed moving average and the later is the detection calculated using simple moving average. 
+
+There are 16 .csv files under ```pre_assumed_moving_average.zip``` and 32 .csv files under ```simple_moving_average.zip``` with variations of agents, window sizes, and detection thresholds. Each .csv file is named as "agent name - window size - detection threshold". The columns of a .csv file is as follows.
+1.	trial: The trial index
+2.	distribution_shift: The index where distribution shift occurs
+3.	detected_level: The index where agent detected novelty
+4.	detection_delay: The delay in dection calculated for a trial
+5.	cdt: 1/0 to indicate if agent detected novelty or not
+6.	novelty_type: The name of the novelty type 
 
 ### 7.1 Human Player Data
-The human player data on Phy-Q is given in ```human_player_data.zip```. This includes summarized data for 20 players. Each .csv file is for a player and the following are the columns.
-1.	levelIndex: The index assigned to the task 
-2.	attempts: Number of attempts taken to solve the task (The value is given as 100 if the task is not solved)
-3.	time_breakdown: Thinking time taken for each attempt (e.g. {1: 27, 2: 14}: Player has taken two attempts to solve the task. Time taken in the first attempt is 27 seconds and time taken for the second attempt is 14 seconds)
-4.	total_time: Total thinking time taken to for all attempts (calculated only for 5 attempts)
-5.	average_rate: The calculated pass rate (e.g. if the player solved the task in the first attempt, the value is given as 1.0 i.e., (6-1)/5. If the player has taken more than 5 attempts, the value is 0) 
-6.	scenario: The index of the physical scenario of the task 
+The human player data on NovPhy is given in ```human_playdata.zip```. This includes data collected from 48 players. Each .csv file is for a player and all the columns are same as what was collected for an agent with an additional column at the end "novelty_detected" to indicate if the player detected novelty.
 
