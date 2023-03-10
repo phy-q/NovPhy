@@ -36,7 +36,7 @@ Due to the emergence of AI systems that interact with the physical environment, 
    1. [The Game Environment](#Env)
    2. [Symbolic Representation Data Structure](#SymbolicRepresentation)
    3. [Communication Protocols](#Protocol)
-7. [Play Data](#PlayData)
+7. [Evaluation Data](#EvaluationData)
 ---
 
 ---
