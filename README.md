@@ -1,5 +1,5 @@
 <div align="center">
-  <center><h1>NovPhy: A Testbed for Physical Reasoning in Open-world Environments</h1></center>
+  <center><h1>NovPhy: A Physical Reasoning Benchmark for Open-world AI Systems</h1></center>
 </div>
 
 <p align="center">
@@ -15,6 +15,11 @@ Maastricht, The Netherlands<br>
 Due to the emergence of AI systems that interact with the physical environment, there is an increased interest in incorporating physical reasoning capabilities into those AI systems. But is it enough to only have physical reasoning capabilities to operate in a real physical environment? In the real world, we constantly face novel situations we have not encountered before. As humans, we are competent at successfully adapting to those situations. Similarly, an agent needs to have the ability to function under the impact of novelties in order to properly operate in an open-world physical environment. To facilitate the development of such AI systems, we propose a new testbed that requires an agent to reason about physical scenarios in the presence of novelties and take actions accordingly. To create tasks in the testbed, we develop novelties representing a diverse novelty space and apply them to commonly encountered five physical scenarios in a physical environment related to applying forces and motions such as rolling, falling, and sliding of objects. We evaluate the agents on their novelty detection and adaptation performance using these tasks. According to our novelty design, we measure two capabilities of an agent: the performance on a novelty when it is applied to different physical scenarios and the performance of a physical scenario when different novelties are applied to it. We conduct a thorough evaluation with human players, learning agents, and heuristic agents. Our evaluation shows that humans' performance is far beyond the agents' performance, some agents even with good normal task performance fail drastically when there is a novelty, and some agents that can adapt to novelties adapt slower than humans. We promote the development of intelligent agents capable of performing at the human level or above when operating in open-world physical environments.
 
 \* equal contribution
+
+Link to the published paper: [https://www.sciencedirect.com/science/article/pii/S0004370224001346#ac0010](https://doi.org/10.1016/j.artint.2024.104198)
+
+##### Please site this article as: V. Pinto, C. Gamage, C. Xue et al., NovPhy: A Physical Reasoning Benchmark for Open-world AI Systems, Artificial Intelligence, https://doi.org/10.1016/j.artint.2024.104198
+
 
 ---
 #### Table of contents
